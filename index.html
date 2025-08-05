@@ -213,7 +213,7 @@
         }
         input.classList.remove("border-red-500");
         const grade = getGrade(score, subject.ranges);
-        results.push(`${subjectName}: ${score} (ចំណាត់ថ្នាក់ ${grade})`);
+        results.push(`${subjectName}: ${score} (និទ្ទេស ${grade})`);
         totalScore += score;
       });
 
@@ -225,7 +225,7 @@
       const finalGrade = getGrade(totalScore, finalGradeRanges);
       const passMessage = finalGrade !== "F" ? "អបអរសាទរ! អ្នកបានជាប់" : "សូមព្យាយាមម្តងទៀតនៅឆ្នាំក្រោយ";
       subjectGradesDiv.innerHTML = results.join("<br>");
-      finalGradeDiv.innerHTML = `ពិន្ទុសរុប: ${totalScore} (ចំណាត់ថ្នាក់ ${finalGrade})<br>${passMessage}`;
+      finalGradeDiv.innerHTML = `ពិន្ទុសរុប: ${totalScore} (និទ្ទេស ${finalGrade})<br>${passMessage}`;
       resultDiv.classList.remove("hidden");
 
       // Update Telegram Main Button
